@@ -55,7 +55,7 @@ def swapped_pairs(ys_pred, ys_target):
     N = ys_target.shape[0]
     swapped = 0
     for i in range(N - 1):
-        for j in range(i, N):
+        for j in range(i + 1, N):
             if ys_target[i] < ys_target[j]:
                 if ys_pred[i] > ys_pred[j]:
                     swapped += 1
